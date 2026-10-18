@@ -1,0 +1,56 @@
+/* Comic Neue keeps long copy playful; Caveat carries the journal headings. */
+:root{--casual:'Comic Neue','Comic Sans MS',cursive}
+body{font-family:var(--casual)}
+#ks-journal,#ks-journal :is(p,span,small,li,label,button,a,select,option,input,strong,summary,figcaption),#ks-journal .section-label,#ks-journal .media-pending,.case-dialog,.case-dialog :is(p,span,small,li,label,button,a,strong),.code-preview-dialog,.code-preview-dialog :is(p,strong,button){font-family:var(--casual)!important}
+#ks-journal :is(h1,h2,h3),#ks-journal header>nav button,#ks-journal .signature>span,#ks-journal .hand-note,#ks-journal .text-button,#ks-journal .project .cover,#ks-journal .cutout-frame figcaption,.case-dialog :is(h1,h2,h3){font-family:var(--hand)!important}
+#ks-journal .source-code,#ks-journal .source-code *{font-family:Consolas,'Courier New',monospace!important}
+#ks-journal .section-label{font-size:14px;letter-spacing:0;font-weight:700}
+#ks-journal .content-note{font-size:13px;line-height:1.55}
+#ks-journal .sheet p{line-height:1.55}
+#ks-journal .studio-button{font-size:16px;line-height:1.25;box-shadow:2px 3px 0 #17356726;border-radius:13px 16px 12px 17px;transition:transform .2s,box-shadow .2s}
+#ks-journal .studio-button:hover{transform:translateY(-2px) rotate(-1deg);box-shadow:3px 5px 0 #17356726}
+#ks-journal .project small{font-size:14px;line-height:1.45}
+#ks-journal .project-status{font-size:13px;line-height:1.45}
+#ks-journal .featured-project{border-radius:18px 12px 20px 14px}
+#ks-journal .featured-project:nth-child(2){transform:rotate(.5deg)}
+#ks-journal .signature small{letter-spacing:0;font-size:12px}
+#ks-journal .page-controls,#ks-journal .page-controls button{font-family:var(--casual);font-size:14px}
+#ks-journal .console-topline{letter-spacing:.04em}
+#ks-journal .console-topline>span:first-child{font-size:12px}
+#ks-journal .console-identity p{font-size:16px;line-height:1.55;max-width:35ch}
+#ks-journal .console-identity .console-role{font-size:14px;line-height:1.4}
+#ks-journal .console-code-panel p{font-size:14px;line-height:1.4}
+#ks-journal .console-code-open{font-size:14px;line-height:1.3}
+.console-avatar{background:#dce7f2;border-color:#8ea8bb}
+.console-avatar img{object-position:center 1%}
+.cutout-frame{position:relative;width:100%;margin:0;display:grid;place-items:center;isolation:isolate;flex-shrink:0;overflow:hidden}
+.cutout-frame:before{content:'';position:absolute;z-index:-1;inset:12% 4% 7%;background:#e3edf8;border-radius:48% 42% 44% 37%;transform:rotate(-7deg)}
+.cutout-frame:after{content:'';position:absolute;z-index:-1;inset:8% 9% 12%;border:1px dashed #8ca9ca;border-radius:42% 45% 40% 48%;transform:rotate(8deg)}
+#ks-journal .cutout-frame .personal-cutout{display:block;width:100%;height:265px;object-fit:contain;object-position:center bottom;filter:drop-shadow(5px 5px 0 #18355816)}
+#ks-journal .cutout-frame figcaption{position:relative;z-index:1;max-width:94%;font:600 25px/1.05 var(--hand);color:#234f7a;background:#fffdf4;padding:7px 15px;transform:rotate(-3deg);box-shadow:1px 3px 0 #344b6b12;border:1px solid #e4dfce;margin-top:-10px;text-align:center}
+.portrait-doodle{position:absolute;right:9px;top:16px;font-size:45px;color:#3e6a94;transform:rotate(12deg)}
+.casual-frame{margin-top:auto;margin-bottom:5px}
+.casual-frame:before{background:#dfebf2;border-radius:42% 48% 37% 42%;inset:10% 1% 7%}
+.speaker-frame{margin-top:auto;margin-bottom:6px}
+.speaker-frame:before{background:#e3eff1;border-radius:40% 48% 42% 37%;inset:13% 3% 6%}
+#ks-journal .speaker-frame .personal-cutout{height:285px}
+.speaker-frame:after{border-color:#86afbd}
+.education-note{display:grid;grid-template-columns:1fr 135px;align-items:center;gap:14px;width:100%}
+#ks-journal .education-note p{font-size:15px;line-height:1.5}
+#ks-journal .educator-frame .personal-cutout{height:164px}
+.educator-frame:before{background:#e5ecde;inset:12% 0 0;border-radius:42% 46% 20% 25%}
+.educator-frame:after{display:none}
+.talk-record{width:100%;border:1px dashed #a4b6ca;border-radius:13px 9px 15px 8px;padding:10px 12px;background:#f3f7fc}
+.talk-record summary{cursor:pointer;font-size:14px;color:#234e7c;min-height:24px;list-style-position:inside}
+.talk-record[open]{display:grid;gap:10px}
+.talk-record summary:focus-visible{outline:3px solid #2563eb;outline-offset:4px}
+#ks-journal .talk-record h3{font-size:25px;margin-top:12px}
+#ks-journal .talk-record p{font-size:14px}
+.case-dialog h1{font-size:clamp(42px,7vw,62px)}
+.case-dialog h2{font-size:30px;line-height:1.2}
+.case-dialog p{line-height:1.6}
+@media(min-width:1001px){#ks-journal:not(.is-work):not(.is-dashboard) .sheet{gap:12px}#ks-journal:not(.is-work):not(.is-dashboard) .sheet h1{font-size:43px}.cutout-frame .personal-cutout{max-height:260px}#ks-journal .speaker-frame .personal-cutout{height:265px}}
+@media(min-width:701px) and (max-width:1000px){.education-note{grid-template-columns:1fr 112px}#ks-journal .educator-frame .personal-cutout{height:155px}}
+@media(max-width:700px){#ks-journal .console-identity p{font-size:13px;line-height:1.5}#ks-journal .console-identity .console-role{font-size:12px;line-height:1.4}.portrait-console{min-height:1115px}.portrait-layer{bottom:140px;height:490px}#ks-journal .console-code-panel p{font-size:12px}#ks-journal .console-code-open{font-size:12px}.portrait-chip{font-size:11px}.console-topline>span:first-child{max-width:220px}#ks-journal .console-cta .studio-button{font-size:13px}}
+@media(max-width:600px){#ks-journal .cutout-frame .personal-cutout{height:280px}#ks-journal .speaker-frame .personal-cutout{height:305px}.cutout-frame{margin-top:5px}.education-note{grid-template-columns:1fr 115px;gap:12px}#ks-journal .educator-frame .personal-cutout{height:160px}#ks-journal .sheet .content-note{font-size:13px}#ks-journal .sheet p{font-size:16px}#ks-journal .education-note p{font-size:15px}#ks-journal .project small{font-size:14px}#ks-journal .project .project-status{font-size:13px}.code-actions button{min-height:40px}#ks-journal .page-controls button{font-size:13px}}
+@media(prefers-reduced-motion:reduce){#ks-journal .studio-button,#ks-journal .featured-project{transform:none!important}}

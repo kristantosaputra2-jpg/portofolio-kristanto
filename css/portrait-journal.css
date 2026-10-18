@@ -1,0 +1,93 @@
+:root{--hand:Caveat,'Segoe Print',cursive;--console-ink:#080f15;--console-blue:#b9d5e6}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.ui-icon{width:22px;height:22px;flex:none;vertical-align:middle}
+#ks-journal .studio-button{gap:9px}
+#ks-journal .signature{font-family:var(--hand);font-size:26px}
+#ks-journal .signature small{font-size:11px}
+#ks-journal nav button{font-family:var(--hand);font-weight:700;font-size:20px;padding:9px 10px}
+#ks-journal h1,#ks-journal h2,#ks-journal h3{font-family:var(--hand);letter-spacing:-.025em}
+#ks-journal h1{font-size:clamp(38px,4.2cqw,56px)}
+#ks-journal .sheet h1{font-size:clamp(34px,4cqw,50px)}
+#ks-journal .sheet h2,#ks-journal .details h2{font:700 clamp(31px,3.5cqw,43px)/1.12 var(--hand)}
+#ks-journal .sheet h3{font:700 27px/1.2 var(--hand)}
+#ks-journal .project .cover,#ks-journal .project:nth-child(n) .cover{font-family:var(--hand);font-size:34px}
+#ks-journal .text-button{font-family:var(--hand);font-size:21px}
+#ks-journal .social-icon-link{display:inline-flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;min-height:48px;background:#eef3fa;border:1px solid #cbd5e1;border-radius:14px;color:#173567;text-decoration:none;transition:transform .2s,background .2s}
+#ks-journal .social-icon-link:hover{background:#dceaff;transform:translateY(-3px)}
+#ks-journal .contact-network{gap:12px}
+#ks-journal .is-work{overflow:visible}
+/* Divider tabs belong to the paper edge, with a dedicated strip above the heading. */
+#ks-journal.is-work .sheet-a{overflow:visible;padding-top:68px}
+#ks-journal.is-work .work-tabs{position:absolute;top:-8px!important;left:20px!important;right:auto!important;bottom:auto!important;width:auto;margin:0!important;height:54px;gap:4px;align-items:stretch}
+#ks-journal.is-work .work-tabs button{min-width:112px;padding:10px 18px;font:700 24px/1 var(--hand);height:54px;border:1px solid #b8c8df;border-bottom:0;border-radius:15px 15px 0 0;background:#dfe8f5;color:#31496b;box-shadow:0 -2px 0 #fff8 inset;transform:rotate(-1deg);clip-path:none}
+#ks-journal.is-work .work-tabs button:nth-child(2){transform:rotate(1deg);background:#e5ebef}
+#ks-journal.is-work .work-tabs button:nth-child(3){transform:rotate(-1deg);background:#d8e1e9}
+#ks-journal.is-work .work-tabs button[aria-pressed=true]{background:#fff;color:#174ea6;border-color:#9ab2d3;z-index:9;transform:translateY(-4px);box-shadow:0 -3px 0 #93b4e9 inset}
+#ks-journal.is-work .work-tabs button:hover{transform:translateY(-5px)}
+#ks-journal.is-dashboard{background:#d7e1e8}
+body:has(#ks-journal.is-dashboard){background:#d7e1e8}
+#ks-journal.is-dashboard header{border-color:#9bafb9;position:relative;z-index:12}
+#ks-journal.is-dashboard .journal-layout{position:relative;display:block;min-height:0;margin-top:24px}
+#ks-journal.is-dashboard .dashboard-intro{display:block;padding:0}
+#ks-journal.is-dashboard .stage{position:absolute;width:100%;height:0!important;min-height:0;aspect-ratio:auto;visibility:hidden;overflow:hidden;pointer-events:none}
+#ks-journal.is-dashboard .home-sections{margin-top:70px}
+.portrait-console{--look-x:0px;--look-y:0px;isolation:isolate;position:relative;min-height:710px;border-radius:44px;background:radial-gradient(ellipse at 38% 33%,#d7e4ec 0,#8da9bb 33%,#527183 61%,#203e52 100%);box-shadow:inset 0 1px 2px #fff9,0 18px 50px #152a3c22;overflow:hidden;color:#eef5f8}
+.console-topline{position:absolute;z-index:7;top:22px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#d6e2e9;font:600 11px/1.4 'Segoe UI',Arial,sans-serif;letter-spacing:.16em}
+.console-topline>span:first-child{background:#0a141cf0;padding:12px 22px;border-radius:22px}
+.console-dots{display:flex;gap:8px;padding:10px 15px;background:#0a141ce8;border-radius:20px}.console-dots i{width:8px;height:8px;background:#8ba3b4;border-radius:50%}
+.console-sculpture{position:absolute;inset:80px 24px 45px 24px;z-index:0;border-radius:70px 105px 85px 120px;background:linear-gradient(135deg,#091118 15%,#061019 60%,#122630);box-shadow:inset 0 1px 1px #f5fbff28,0 12px 15px #08152266}
+.console-sculpture:after{content:'';position:absolute;left:6%;top:15%;width:45%;height:73%;background:radial-gradient(ellipse,#59819655,transparent 65%);border-radius:50%}
+.console-profile{position:absolute;z-index:5;left:40px;top:100px;width:128px;display:grid;justify-items:center;gap:13px}
+.console-avatar{width:67px;height:67px;border:5px solid #819eaf;border-radius:50%;background:#c3d2dc;box-shadow:0 0 0 5px #182b38,0 5px 12px #0008;overflow:hidden}.console-avatar img{height:100%;width:100%;object-fit:cover;object-position:center 8%}
+.console-socials{display:grid;grid-template-columns:1fr 1fr;gap:6px}.console-social{display:grid;place-items:center;width:42px;height:42px;min-height:42px;border-radius:12px;color:#dbe7ef;text-decoration:none;background:#1b303d;border:1px solid #527082;transition:transform .2s,background .2s}.console-social:hover{background:#285b86;transform:translateY(-3px)}
+.hand-note{font:500 22px/1.1 var(--hand);letter-spacing:0}
+.console-identity{position:relative;margin-left:49%;padding:116px 54px 0 24px;z-index:5;max-width:690px;pointer-events:auto}
+#ks-journal .console-identity h1{font:700 clamp(64px,6.2cqw,91px)/.86 var(--hand);letter-spacing:-.045em;margin:12px 0 22px;max-width:none;color:#f0f6fa;text-shadow:0 2px 20px #0002}
+.name-period{color:#7fc6f7}
+#ks-journal .console-identity .console-role{font:600 12px/1.5 'Segoe UI',Arial,sans-serif;color:#c5dbe9;max-width:28ch;margin:0 0 16px}
+#ks-journal .console-identity p{color:#c2d2dd;font-size:14px;line-height:1.65;max-width:39ch}
+.console-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:24px}
+#ks-journal .console-cta .studio-button{background:#c2def0;color:#0a2132;border-color:#c2def0;padding:10px 17px;min-height:44px}
+#ks-journal .console-cta .text-button{color:#d7e9f5;font-size:20px;border-color:#607c91}
+.portrait-layer{position:absolute;z-index:3;bottom:65px;left:10%;width:43%;height:565px;pointer-events:none;transform:translate(var(--look-x),var(--look-y));transition:transform .3s ease-out}
+.editorial-portrait{height:100%;width:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(14px 8px 12px #020b1440);display:block;animation:portrait-in .8s cubic-bezier(.22,1,.36,1) both}
+.portrait-caption{position:absolute;z-index:6;left:15%;bottom:107px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;max-width:35%}.portrait-chip{padding:8px 15px;border:1px solid #bfd4e669;background:#0c1a27cc;border-radius:10px;backdrop-filter:blur(8px);font:600 11px/1.5 'Segoe UI',Arial,sans-serif;box-shadow:0 4px 20px #0003}
+#ks-journal .portrait-caption button{font:12px/1.4 'Segoe UI',Arial,sans-serif;min-height:32px;padding:6px 12px;background:#ddebf0e8;color:#132c3f;border:0;border-radius:8px}
+#ks-journal .console-dock{position:absolute;z-index:8;left:27px;bottom:95px;display:grid;justify-items:center;gap:6px;flex:none;padding:13px 7px;background:linear-gradient(135deg,#314e60,#091824);border:1px solid #c8e2ee55;border-radius:30px;box-shadow:0 5px 12px #0007,inset 1px 1px 1px #fff5}
+#ks-journal .console-dock button{display:grid;place-items:center;min-height:42px;width:42px;min-width:42px;padding:0;color:#c8e0ef;border-radius:50%;background:none;border:0}
+#ks-journal .console-dock button:hover{color:white;background:#518cbe55;transform:scale(1.1)}
+.dock-rule{height:1px;width:24px;background:#87a5b65e;margin:3px 0}
+.console-code-panel{position:absolute;z-index:6;right:40px;bottom:92px;width:230px;padding:18px 20px 20px;background:linear-gradient(140deg,#284353,#0c1a24);border:1px solid #96b9cc55;border-radius:25px;box-shadow:0 8px 16px #0007,inset 0 1px 1px #fff4;transform:translate(calc(var(--look-x) * -.5),calc(var(--look-y) * -.5));transition:transform .3s}
+.code-panel-heading{display:flex;align-items:center;gap:10px;font:600 13px/1.5 'Segoe UI',Arial,sans-serif;color:#dcebf6}.code-panel-led{width:6px;height:6px;background:#a2d6ff;box-shadow:0 0 8px #74c4ff;border-radius:50%;margin-left:auto}
+.code-languages{display:flex;gap:6px;margin-top:15px}.code-languages span{display:grid;place-items:center;flex:1;height:38px;border:1px solid #5d859e70;border-radius:10px;background:#0d1d29;font:600 11px 'Segoe UI',Arial,sans-serif;color:#c0d7e6}
+#ks-journal .console-code-panel p{font-size:12px;line-height:1.5;color:#c3d4df;margin:14px 0}
+#ks-journal .console-code-open{width:100%;display:flex;align-items:center;justify-content:space-between;background:#a6cce5;border:0;border-radius:10px;min-height:40px;padding:8px 12px;font:600 12px 'Segoe UI',Arial,sans-serif;color:#102332}
+.circuit-trace{height:25px;width:100%;margin:8px 0 -11px;opacity:.6;fill:none;stroke:#8dc5eb;stroke-width:1;stroke-dasharray:300;animation:trace-in 1.2s .2s ease-out both}
+.journal-launch{position:absolute;z-index:6;right:307px;bottom:92px;width:125px;background:#0d1b26d9;border:1px solid #97b2c45e;border-radius:20px;padding:8px;box-shadow:0 4px 10px #0004;transition:transform .25s}
+.journal-launch img{width:100%;height:89px;object-fit:contain;border-radius:12px;display:block;mix-blend-mode:luminosity}
+.journal-launch span{display:flex;gap:5px;align-items:center;justify-content:center;color:#e0edf4;font:11px/1.4 'Segoe UI',Arial,sans-serif;padding:7px 0}.journal-launch .ui-icon{width:15px;height:15px}.journal-launch:hover{transform:rotate(-3deg) translateY(-5px)}
+.console-bottomline{position:absolute;z-index:6;bottom:20px;left:35px;right:35px;display:flex;gap:20px;justify-content:space-between;align-items:center;color:#c7d9e4;font:11px/1.5 'Segoe UI',Arial,sans-serif}.console-bottomline .hand-note{font-size:20px;color:#dcebf3}
+@keyframes portrait-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes trace-in{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+.motion-paused .portrait-console *{animation:none!important;transition:none!important;transform:none!important}
+.code-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.github-repos{display:grid;width:100%;gap:10px}
+#ks-journal .repo-card{width:100%;text-align:left;display:grid;gap:5px;border:1px solid #c2d0e0;border-radius:10px;background:#f5f8fc;padding:14px 16px;color:#1a3550;font:600 16px/1.4 'Segoe UI',Arial,sans-serif;overflow-wrap:anywhere}
+#ks-journal .repo-card[aria-pressed=true]{border-color:#35699e;background:#e2edf8;box-shadow:inset 3px 0 0 #35699e}
+.repo-card small{font:12px/1.5 'Segoe UI',Arial,sans-serif;color:#475569;font-weight:400}
+#ks-journal.is-code .sheet{gap:12px;padding-top:25px}
+#code-file{max-width:100%;width:100%;min-height:44px;padding:9px;border:1px solid #aebfd4;background:white;border-radius:7px;font:13px 'Segoe UI',Arial,sans-serif}
+.code-file-label{font:13px 'Segoe UI',Arial,sans-serif;color:#334155}.code-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px}.code-actions .ui-icon{width:17px;height:17px;margin-right:4px}
+#ks-journal .code-actions button{font:600 12px 'Segoe UI',Arial,sans-serif}.code-actions a{font-size:12px}button:disabled{cursor:not-allowed;opacity:.5}
+.source-code{white-space:pre;tab-size:2;overflow:auto;max-width:100%;width:100%;min-height:180px;max-height:360px;background:#0d1b27;color:#d8e7f2;padding:16px;border-radius:9px;box-sizing:border-box;margin:0;font:12px/1.7 Consolas,monospace;flex-shrink:0}
+.code-preview-dialog{box-sizing:border-box;width:min(1100px,96vw);height:90dvh;max-height:90dvh;border:1px solid #617d91;border-radius:18px;background:#e8f0f6;color:#102332;padding:18px;font:14px/1.5 'Segoe UI',Arial,sans-serif}.code-preview-dialog::backdrop{background:#06121bd9}.code-preview-dialog iframe{display:block;width:100%;height:calc(100% - 95px);border:1px solid #b6c8d7;border-radius:10px;background:white}.code-preview-dialog header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.code-preview-dialog p{margin:8px 0;font-size:12px}
+@media(min-width:1001px){#ks-journal.is-code .sheet{top:var(--top);height:var(--sh);overflow:auto}.github-repos{padding-bottom:12px}}
+@media(max-width:1000px){.portrait-console{min-height:790px}.console-identity{margin-left:45%;padding-right:35px;padding-left:12px}.console-code-panel{bottom:78px;right:25px;width:220px}.journal-launch{bottom:78px;right:285px;width:110px}.portrait-layer{left:6%;width:48%;height:550px;bottom:97px}.console-profile{left:28px;top:100px;width:105px}.console-bottomline .hand-note{display:none}#ks-journal .console-identity h1{font-size:70px}.portrait-caption{bottom:120px;left:13%}.console-dock{left:18px!important;bottom:115px!important}}
+@media(max-width:700px){#ks-journal nav button{font-size:20px;padding:8px 9px}#ks-journal .signature{font-size:24px}.portrait-console{min-height:940px;border-radius:32px}.console-topline{left:18px;right:18px;top:18px;font-size:9px;letter-spacing:.08em}.console-topline>span:first-child{padding:10px 14px}.console-sculpture{inset:70px 13px 45px;border-radius:48px 64px 40px 64px}.console-profile{left:27px;top:93px;width:85px;gap:12px}.console-avatar{width:55px;height:55px;border-width:4px}.console-social{width:34px;height:36px;min-height:36px;border-radius:10px}.console-social .ui-icon{width:18px;height:18px}.console-profile .hand-note{font-size:19px}.console-identity{margin-left:33%;padding:94px 22px 0 8px}.console-identity>.hand-note{font-size:23px}#ks-journal .console-identity h1{font-size:62px;line-height:.85;margin-top:10px;margin-bottom:17px}#ks-journal .console-identity .console-role{font-size:10px;line-height:1.5;max-width:22ch;margin-bottom:12px}#ks-journal .console-identity p{font-size:11px;line-height:1.6}.console-cta{gap:10px;margin-top:16px}#ks-journal .console-cta .studio-button{font-size:11px;min-height:40px;padding:9px 12px}#ks-journal .console-cta .text-button{font-size:18px;min-height:36px;padding:5px 0}.portrait-layer{height:510px;width:88%;left:-4%;bottom:157px;z-index:3}.portrait-caption{bottom:177px;left:22%;max-width:55%}.portrait-chip{font-size:10px;padding:7px 11px}.console-code-panel{right:25px;bottom:78px;width:130px;padding:14px;z-index:6;border-radius:19px}.code-panel-heading{font-size:11px;gap:6px}.code-panel-heading .ui-icon{width:17px;height:17px}.code-languages{gap:3px;margin-top:12px}.code-languages span{height:30px;font-size:9px}#ks-journal .console-code-panel p{font-size:10px;margin:10px 0}.console-code-open .ui-icon{width:16px;height:16px}#ks-journal .console-code-open{font-size:10px;padding:7px;min-height:36px}.circuit-trace{height:20px}.journal-launch{width:102px;right:auto;left:28px;bottom:78px;z-index:7}.journal-launch img{height:68px}.journal-launch span{font-size:9px}.journal-launch .ui-icon{width:13px}.console-dock{left:auto!important;right:19px;bottom:316px!important;padding:10px 5px!important;gap:5px!important;border-radius:24px!important}#ks-journal .console-dock button{width:35px;min-width:35px;min-height:37px}.console-dock .ui-icon{width:20px;height:20px}.console-bottomline{left:24px;right:24px;bottom:20px;font-size:10px}#ks-journal.is-work .sheet-a{padding-top:68px}#ks-journal.is-work .work-tabs{left:25px!important;top:-9px!important;max-width:calc(100% - 34px);gap:3px}#ks-journal.is-work .work-tabs button{font-size:21px;min-width:0;height:50px;min-height:50px;padding:10px 12px}#ks-journal .sheet h1{font-size:39px}#ks-journal .sheet h2{font-size:34px}.code-actions{gap:10px}.source-code{font-size:11px;max-height:330px}#ks-journal.is-code .sheet{overflow:hidden}}
+@media(max-width:380px){.portrait-console{min-height:970px}.console-identity{margin-left:31%;padding-right:18px}#ks-journal .console-identity h1{font-size:55px}.console-profile{left:22px;width:73px}.console-social{width:30px;min-height:34px;height:34px}.console-cta{flex-direction:column;align-items:flex-start}.portrait-layer{bottom:155px;height:500px;left:-8%;width:94%}.journal-launch{left:22px;width:94px}.console-code-panel{right:18px}.console-profile .hand-note{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.portrait-console *{animation:none!important;transition:none!important;transform:none!important}.circuit-trace{stroke-dashoffset:0}}
+/* Reserve separate vertical zones for the introduction and portrait/control layers. */
+@media(min-width:1001px){.portrait-console{min-height:840px}.portrait-layer{height:690px}.console-code-panel,.journal-launch{bottom:70px}}
+@media(min-width:701px) and (max-width:1000px){.portrait-console{min-height:900px}}
+@media(max-width:700px){.portrait-console{min-height:1050px}.portrait-layer{height:500px;bottom:140px}.portrait-caption{bottom:195px}.console-dock{bottom:325px!important}}
+@media(max-width:600px){#ks-journal .projects{grid-template-columns:1fr}#ks-journal .project .cover,#ks-journal .project:nth-child(n) .cover{font-size:34px;min-height:90px;overflow-wrap:anywhere}}

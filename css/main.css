@@ -1,0 +1,271 @@
+#ks-journal{--blue:#2b5bbd;--red:#be2330;--paper:#f8f8f3;--binder-image:url('../assets/images/binder-open.webp');color-scheme:light;background:#fcfaf3;background-image:linear-gradient(#d8d3c530 1px,transparent 1px),linear-gradient(90deg,#d8d3c530 1px,transparent 1px);background-size:11px 11px;color:#572a23;padding:24px 2% 12px;font:19px Gaegu,'Segoe Print',cursive;container-type:inline-size}
+#ks-journal *{box-sizing:border-box}#ks-journal button{font:inherit;color:inherit}#ks-journal header{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:0 2% 24px}#ks-journal .signature{border:0;background:none;font:32px 'Protest Riot',cursive;color:var(--blue);text-align:left;transform:rotate(-3deg)}#ks-journal .signature small{display:block;font:12px Gaegu,cursive;letter-spacing:2px;margin-top:6px}#ks-journal nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:end}#ks-journal nav button{border:0;background:none;color:var(--blue);font:21px 'Protest Riot',cursive;padding:8px 6px;position:relative}#ks-journal nav button[aria-pressed=true]:after{content:'';position:absolute;inset:3px -3px;border:2px solid #d99042;border-radius:50%;transform:rotate(-8deg)}#ks-journal .stage{position:relative;height:520px;overflow:clip;transition:height 820ms cubic-bezier(.22,1,.36,1)}#ks-journal .book-object{position:absolute;left:50%;top:50%;width:var(--bw,960px);height:var(--bh,495px);background:none;transform:translate(-50%,-50%) rotate(0deg);transition:transform 820ms cubic-bezier(.22,1,.36,1),width 820ms cubic-bezier(.22,1,.36,1),height 820ms cubic-bezier(.22,1,.36,1);pointer-events:none}#ks-journal .book-object:before,#ks-journal .book-object:after{content:'';position:absolute;top:3%;bottom:3%;background:var(--paper);width:37.2%}#ks-journal .book-object:before{left:8.1%}#ks-journal .book-object:after{left:49.3%}#ks-journal.is-work .book-object{transform:translate(-50%,-50%) rotate(90deg)}#ks-journal .spread{position:absolute;inset:0;opacity:1;transition:opacity 220ms cubic-bezier(.4,0,.2,1);pointer-events:auto}#ks-journal .spread.concealed{opacity:0;pointer-events:none}#ks-journal .sheet{position:absolute;left:var(--left);top:var(--top);width:var(--sw);height:var(--sh);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;padding:15px 18px}#ks-journal h1,#ks-journal h2,#ks-journal h3{font-family:'Protest Riot',cursive;font-weight:400;line-height:1.1;color:var(--red);margin:0}#ks-journal h1{font-size:clamp(28px,4.5cqw,48px)}#ks-journal h2{font-size:clamp(24px,3.3cqw,36px)}#ks-journal h3{font-size:21px}#ks-journal p{margin:0;line-height:1.2;font-size:clamp(16px,2cqw,21px)}#ks-journal .eyebrow{font:11px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}#ks-journal .portrait{height:180px;max-width:100%;object-fit:contain;filter:drop-shadow(3px 6px 3px #302a2520)}#ks-journal .photoframe{display:inline-block;background:#f2eee3;padding:7px 7px 23px;box-shadow:2px 5px 7px #3a322526;transform:rotate(-5deg);width:140px}#ks-journal .photoframe img{display:block;width:100%;height:115px;object-fit:cover}#ks-journal .link-button{border:0;border-bottom:1px solid var(--red);background:none;color:var(--red);padding:7px 3px}#ks-journal .annotation{font-size:14px;color:#8b453a}#ks-journal .paper{background:#eeead7;padding:16px;box-shadow:2px 5px 8px #4637211a;transform:rotate(-2deg)}#ks-journal .work-tabs{display:flex;gap:10px;flex-wrap:nowrap;justify-content:flex-start;align-items:flex-end;align-self:flex-start;margin:-24px 0 18px 0;position:relative;z-index:4;padding-left:0}#ks-journal .work-tabs button{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-width:108px;height:52px;background:#e7dfcf;border:2px solid #2e2a28;border-bottom:none;padding:10px 20px 11px;border-radius:16px 16px 0 0;font:700 20px 'Gaegu',cursive;color:#6d4a28;line-height:1;text-align:center;box-shadow:0 -1px 0 #fff8 inset,0 3px 6px #2f271c14;position:relative;transform:none;cursor:pointer;vertical-align:bottom}#ks-journal .work-tabs button::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--paper)}#ks-journal .work-tabs button[aria-pressed=true]{background:#f8f8f3;color:#305c42;transform:none;box-shadow:0 -1px 0 #fff8 inset}#ks-journal .work-tabs button:hover{transform:translateY(-1px)}#ks-journal .work-tabs button[aria-pressed=true]:hover{transform:none}#ks-journal .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;width:100%;text-align:left;padding:8px 10px 0;align-items:start}#ks-journal .project{border:0;background:none;padding:0;text-align:left;min-width:0;display:block;position:relative}#ks-journal .project .cover{display:flex;align-items:flex-end;justify-content:flex-start;min-height:128px;padding:22px 16px 16px;color:#28344f;background:#cfe0fb;font:700 clamp(28px,3.3cqw,38px) 'Gaegu',cursive;line-height:.95;border-radius:4px 18px 8px 8px;box-shadow:0 12px 18px #2929211a,0 2px 0 #fff7 inset;transform:rotate(-2deg);position:relative;overflow:visible;text-shadow:none}#ks-journal .project .cover::before{content:'';position:absolute;top:-10px;left:18px;width:54px;height:18px;background:#f9f0c0d9;border:1px solid #d8c98d;border-radius:3px;transform:rotate(-6deg);box-shadow:0 1px 2px #00000012}#ks-journal .project .cover::after{content:'';position:absolute;right:0;top:0;width:18px;height:18px;background:linear-gradient(135deg,#ffffffb0 0 50%,transparent 50% 100%);border-radius:0 18px 0 0}#ks-journal .project:nth-child(1) .cover{background:#cfe0fb;color:#315690;transform:rotate(-3deg)}#ks-journal .project:nth-child(2) .cover{background:#f4d5d6;color:#9d3339;transform:rotate(2deg);margin-top:10px}#ks-journal .project:nth-child(3) .cover{background:#dce8c7;color:#486136;transform:rotate(-1deg)}#ks-journal .project:nth-child(4) .cover{background:#f7e4ab;color:#7b5b20;font-size:clamp(24px,3cqw,34px);transform:rotate(3deg);margin-top:8px}#ks-journal .project small{display:block;font:16px/1.15 'Gochi Hand',cursive;color:#6a5b4d;margin-top:10px;padding-left:6px;max-width:92%}#ks-journal .project:hover .cover{transform:rotate(0deg) translateY(-4px)}#ks-journal .project:nth-child(2):hover .cover,#ks-journal .project:nth-child(4):hover .cover{transform:rotate(0deg) translateY(-4px)}#ks-journal .details{width:100%;text-align:left;display:grid;gap:15px}#ks-journal .details h2{font-size:34px;font-family:'Gaegu',cursive;line-height:.95}#ks-journal .detail-tag{font:14px 'Gochi Hand',cursive;color:var(--blue);letter-spacing:.6px}#ks-journal .certs{list-style:none;padding:0;margin:0;display:grid;gap:13px;width:100%;text-align:left;font-size:17px;line-height:1.15}#ks-journal .certs li{border-bottom:1px solid #dad7cc;padding-bottom:10px}#ks-journal .certs small{display:block;font:11px Arial,sans-serif;color:#6e6458;margin-top:5px;line-height:1.4}#ks-journal .page-controls{display:flex;justify-content:space-between;align-items:center;padding:15px 3%;color:var(--blue)}#ks-journal .page-controls button{border:0;background:none;padding:8px;font-size:18px}#ks-journal footer{display:flex;justify-content:space-between;gap:15px;padding:12px 3%;font:11px Arial,sans-serif;color:var(--blue)}#ks-journal [hidden]{display:none!important}
+@media(max-width:600px){#ks-journal header{flex-direction:column;align-items:start;padding-bottom:15px}#ks-journal nav{gap:5px;justify-content:start}#ks-journal nav button{font-size:19px;padding:8px 5px}#ks-journal .sheet{padding:20px 14px}#ks-journal h1{font-size:31px}#ks-journal h2{font-size:28px}#ks-journal .portrait{height:150px}#ks-journal .photoframe{width:120px}#ks-journal .sheet p{font-size:18px}#ks-journal .projects{gap:12px}#ks-journal .project .cover{min-height:83px;font-size:22px}#ks-journal .project:nth-child(4) .cover{font-size:19px}#ks-journal footer{font-size:10px}}
+@media(prefers-reduced-motion:reduce){#ks-journal .stage,#ks-journal .book-object,#ks-journal .spread{transition:none}}
+
+#ks-journal .social-link{display:grid;grid-template-columns:62px minmax(0,1fr);column-gap:12px;align-items:center;padding:7px 3px;text-align:left;border-bottom:1px dashed #c9c2b2}
+#ks-journal .social-link .social-sticker{grid-column:1;grid-row:1/3;width:62px;height:62px;object-fit:contain;transform:rotate(-5deg);transition:transform 200ms ease;mix-blend-mode:multiply}
+#ks-journal .social-link span{grid-column:2;grid-row:1;align-self:end;line-height:1.1}
+#ks-journal .social-link small{grid-column:2;grid-row:2;align-self:start;margin-top:5px;overflow-wrap:anywhere}
+#ks-journal .social-link:hover .social-sticker{transform:rotate(3deg) scale(1.06)}
+#ks-journal .social-link.primary-contact{width:100%;grid-template-columns:78px minmax(0,1fr);background:#f4f1e7;border:1px solid #dad2c0;padding:10px;box-shadow:2px 4px 6px #3a322516}
+#ks-journal .primary-contact .social-sticker{width:78px;height:78px}
+#ks-journal .store-action{display:grid;grid-template-columns:65px minmax(0,1fr);column-gap:12px;align-items:center;text-align:left;border:0;border-bottom:1px dashed #a5b994;padding:10px;background:#f4f1e7}
+#ks-journal .store-action .social-sticker{grid-column:1;grid-row:1/3;width:65px;height:70px;object-fit:contain;mix-blend-mode:multiply;transform:rotate(-4deg)}
+#ks-journal .store-action span{grid-column:2;align-self:end}
+#ks-journal .store-action small{grid-column:2;font:12px Arial,sans-serif;align-self:start;margin-top:5px}
+@media(max-width:600px){#ks-journal .social-link{grid-template-columns:52px minmax(0,1fr);gap:2px 9px}#ks-journal .social-link .social-sticker{width:52px;height:52px}#ks-journal .social-link.primary-contact{grid-template-columns:64px minmax(0,1fr)}#ks-journal .primary-contact .social-sticker{width:64px;height:64px}}
+@media(prefers-reduced-motion:reduce){#ks-journal .social-link .social-sticker{transition:none}}
+
+
+/* ===== KARYA: full-size rotated binder refinement ===== */
+#ks-journal.is-work .stage{
+  overflow:visible;
+}
+
+#ks-journal.is-work .sheet{
+  justify-content:flex-start;
+  align-items:stretch;
+  text-align:left;
+  gap:12px;
+}
+
+#ks-journal.is-work .sheet-a{
+  padding:30px 28px 24px;
+}
+
+#ks-journal.is-work .sheet-b{
+  padding:34px 30px 26px;
+}
+
+#ks-journal.is-work .work-tabs{
+  align-self:flex-start;
+  margin:-6px 0 18px 8px;
+}
+
+#ks-journal.is-work .work-tabs button{
+  flex:0 0 auto;
+}
+
+#ks-journal.is-work .sheet-a > h2{
+  margin:2px 0 10px 10px !important;
+  max-width:92%;
+}
+
+#ks-journal.is-work .projects{
+  padding:8px 12px 0;
+  gap:24px 20px;
+}
+
+#ks-journal.is-work .project .cover{
+  min-height:132px;
+  padding:24px 18px 16px;
+}
+
+#ks-journal.is-work .project small{
+  margin-top:9px;
+  padding-left:8px;
+  font-size:16px;
+}
+
+#ks-journal.is-work .details{
+  gap:10px;
+}
+
+#ks-journal.is-work .details h2{
+  margin:0;
+}
+
+#ks-journal.is-work .filmstrip{
+  margin:8px 0 4px;
+}
+
+@media(max-width:600px){
+  #ks-journal.is-work .sheet-a,
+  #ks-journal.is-work .sheet-b{
+    padding:22px 18px 20px;
+  }
+
+  #ks-journal.is-work .work-tabs{
+    gap:5px;
+    margin:-2px 0 14px 2px;
+  }
+
+  #ks-journal.is-work .work-tabs button{
+    padding:8px 12px 10px;
+    font-size:17px;
+  }
+
+  #ks-journal.is-work .projects{
+    gap:18px 12px;
+    padding:6px 4px 0;
+  }
+
+  #ks-journal.is-work .project .cover{
+    min-height:108px;
+    padding:18px 12px 13px;
+  }
+
+  #ks-journal.is-work .project small{
+    font-size:14px;
+  }
+}
+
+
+/* ===== Dashboard cover page ===== */
+#ks-journal .dashboard-cover{
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  gap:10px;
+  width:100%;
+  height:100%;
+  text-align:center;
+}
+
+#ks-journal .dashboard-cover img{
+  width:min(100%, 380px);
+  max-height:100%;
+  object-fit:contain;
+  filter:drop-shadow(0 14px 18px rgba(0,0,0,.16));
+}
+
+#ks-journal .dashboard-note{
+  font:14px 'Gochi Hand','Gaegu',cursive;
+  letter-spacing:.4px;
+  color:#5f5a50;
+}
+
+#ks-journal .dashboard-panel{
+  display:grid;
+  align-content:center;
+  gap:16px;
+  height:100%;
+  text-align:left;
+}
+
+#ks-journal .dashboard-title{
+  margin:0;
+  font-family:'Gaegu',cursive;
+  font-size:clamp(42px, 6cqw, 64px);
+  line-height:.92;
+  color:var(--ink);
+}
+
+#ks-journal .dashboard-panel p{
+  margin:0;
+}
+
+#ks-journal .dashboard-enter{
+  justify-self:flex-start;
+}
+
+@media (max-width:600px){
+  #ks-journal .dashboard-cover img{
+    width:min(100%, 290px);
+  }
+  #ks-journal .dashboard-panel{
+    gap:12px;
+  }
+  #ks-journal .dashboard-title{
+    font-size:44px;
+  }
+}
+
+
+/* ===== Dashboard full-image mode ===== */
+#ks-journal .dashboard-hero{
+  display:none;
+  width:100%;
+  height:100%;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+#ks-journal .dashboard-hero img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+#ks-journal.is-dashboard .dashboard-hero{
+  display:flex;
+}
+
+#ks-journal.is-dashboard .book-object,
+#ks-journal.is-dashboard .spread{
+  display:none;
+}
+
+#ks-journal.is-dashboard .stage{
+  background:transparent;
+}
+
+@media (max-width:600px){
+  #ks-journal.is-dashboard .dashboard-hero img{
+    object-fit:contain;
+  }
+}
+/* Binder visibility guard after asset split */
+#ks-journal:not(.is-dashboard) .book-object{
+  display:block;
+  opacity:1;
+  visibility:visible;
+}
+
+/* ===== Robust binder rendering =====
+   The binder now uses a real <img>, not CSS background-image.
+   This is more reliable after splitting HTML/CSS/assets. */
+#ks-journal .stage{
+  isolation:isolate;
+}
+
+#ks-journal .book-object{
+  z-index:1;
+  display:block;
+  visibility:visible;
+  opacity:1;
+  overflow:visible;
+}
+
+#ks-journal .binder-open-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:fill;
+  pointer-events:none;
+  user-select:none;
+  z-index:0;
+}
+
+#ks-journal .book-object::before,
+#ks-journal .book-object::after{
+  z-index:1;
+}
+
+#ks-journal .spread{
+  z-index:2;
+}
+
+#ks-journal .dashboard-hero{
+  position:absolute;
+  inset:0;
+  z-index:4;
+}
+
+#ks-journal.is-dashboard .book-object,
+#ks-journal.is-dashboard .spread{
+  display:none !important;
+}
+
+#ks-journal:not(.is-dashboard) .dashboard-hero{
+  display:none !important;
+}
+
+#ks-journal:not(.is-dashboard) .book-object{
+  display:block !important;
+}

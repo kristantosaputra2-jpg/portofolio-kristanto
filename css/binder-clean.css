@@ -1,0 +1,56 @@
+/* User-supplied blank binder photograph, with live content above the paper. */
+#ks-journal .book-object {
+  background: url('../assets/images/binder-natural.png') center / 100% 100% no-repeat;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+#ks-journal .book-object::before,
+#ks-journal .book-object::after {
+  display: none;
+  background: #f8f8f3;
+  border: 1px solid #deded4;
+  border-radius: 3px;
+  box-shadow: 3px 0 0 #d6d6cd, 5px 0 0 #eeeeE7;
+}
+#ks-journal .binder-rings {
+  visibility: hidden;
+  position: absolute;
+  z-index: 3;
+  left: 45.4%;
+  top: 9%;
+  bottom: 9%;
+  width: 4.2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#ks-journal .binder-rings i {
+  display: block;
+  height: 12px;
+  border: 2px solid #96998f;
+  border-radius: 50%;
+  background: linear-gradient(#f7f8f3, #94988f 50%, #eceee7);
+  box-shadow: 0 2px 2px #15161480;
+}
+#ks-journal .sheet { background: transparent; }
+#ks-journal.is-work .book-object::before { left: 7.5%; width: 38.5%; top: 10%; bottom: 10%; }
+#ks-journal.is-work .book-object::after { left: 51.5%; width: 38.5%; top: 10%; bottom: 10%; }
+#ks-journal.is-work .binder-rings { left: 46.8%; width: 4.3%; }
+@media (max-width: 600px) {
+  #ks-journal:not(.is-dashboard) .stage { height: auto !important; padding: 0; }
+  #ks-journal:not(.is-dashboard) .book-object { visibility: hidden; }
+  #ks-journal:not(.is-dashboard) .book-object { width: 100%; height: 100%; transform: translate(-50%, -50%); }
+  #ks-journal:not(.is-dashboard) .book-object::before,
+  #ks-journal:not(.is-dashboard) .book-object::after,
+  #ks-journal:not(.is-dashboard) .binder-rings { display: none; }
+  #ks-journal:not(.is-dashboard) .spread { position: relative; display: grid; gap: 24px; }
+  #ks-journal:not(.is-dashboard) .sheet { position: relative; left: auto; top: auto; width: 100%; height: auto; min-height: 400px; padding: 36px 30px; background: url('../assets/images/binder-natural.png') 12% center / 260% 100% no-repeat; }
+  #ks-journal.is-work .sheet-a { padding-top: 70px; }
+  #ks-journal.is-work .work-tabs { top: 8px; left: 4px; right: 4px; width: auto; }
+  #ks-journal.is-work .work-tabs button { min-width: 0; flex: 1; padding-left: 8px; padding-right: 8px; }
+  #ks-journal:not(.is-work) .book-object::before,
+  #ks-journal:not(.is-work) .book-object::after { left: 10%; width: 80%; top: 3%; bottom: 3%; }
+  #ks-journal:not(.is-work) .book-object::after,
+  #ks-journal:not(.is-work) .binder-rings { display: none; }
+}

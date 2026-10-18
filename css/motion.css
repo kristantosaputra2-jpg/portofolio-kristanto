@@ -1,0 +1,188 @@
+#ks-journal .stage{perspective:1800px}#ks-journal .sheet{gap:12px}#ks-journal .turn-leaf{position:absolute;z-index:15;transform-style:preserve-3d;pointer-events:none}#ks-journal .leaf-face{position:absolute;inset:0;backface-visibility:hidden;background:#f8f8f3;box-shadow:0 5px 18px #32271633;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:15px 18px;overflow:hidden}#ks-journal .leaf-back{transform:rotateY(180deg);background:linear-gradient(90deg,#dcdacf,#f8f8f3 14%,#f8f8f3 90%,#e4e1d7)}
+#ks-journal .polaroid-stack{position:relative;width:min(100%,290px);height:225px;margin:6px auto 0}#ks-journal .polaroid{background:#f5f0e5;border:1px solid #d6d0c5;padding:7px 7px 25px;box-shadow:2px 5px 9px #352a2430;color:#572a23}#ks-journal .polaroid-stack .polaroid{position:absolute;width:49%;height:178px;left:2%;top:12px;transform:rotate(-13deg);transition:transform 240ms,top 240ms}#ks-journal .polaroid-stack .polaroid:nth-child(2){left:46%;top:26px;transform:rotate(11deg)}#ks-journal .polaroid-stack .polaroid:nth-child(3){left:25%;top:44px;transform:rotate(-3deg);z-index:2}#ks-journal .polaroid img{width:100%;height:100%;object-fit:cover;display:block;background:#e7e6dc}#ks-journal .polaroid figcaption{font-size:13px;line-height:18px;text-align:center;white-space:nowrap}#ks-journal .polaroid-stack figure{margin:0}#ks-journal .polaroid-stack:hover .polaroid:first-child{transform:rotate(-18deg) translateX(-4px)}#ks-journal .polaroid-stack:hover .polaroid:nth-child(2){transform:rotate(17deg) translateX(4px)}#ks-journal .polaroid-stack .polaroid:nth-child(3):hover{transform:rotate(0) translateY(-8px)}
+#ks-journal .filmstrip{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;background:#232323;padding:21px 8px;position:relative;transform:rotate(-2deg);margin:9px 0;box-shadow:2px 6px 8px #302b2229}#ks-journal .filmstrip:before,#ks-journal .filmstrip:after{content:'';position:absolute;left:5px;right:5px;height:9px;background:repeating-linear-gradient(90deg,#f3f0e5 0 9px,transparent 9px 18px)}#ks-journal .filmstrip:before{top:5px}#ks-journal .filmstrip:after{bottom:5px}#ks-journal .filmstrip img{width:100%;height:90px;object-fit:cover;background:#ccc}#ks-journal .film-caption{font-size:12px;color:#766649;letter-spacing:1px}#ks-journal .social-links{width:100%;display:grid;gap:8px;text-align:left}#ks-journal .social-link{display:flex;justify-content:space-between;align-items:center;border:0;border-bottom:1px dashed #c9c2b2;background:none;padding:10px 5px;font-size:19px;text-decoration:none;color:var(--blue)}#ks-journal .social-link small{font:10px Arial,sans-serif;color:#817767}#ks-journal .social-link.primary-contact{background:#e0e6d6;border:1px solid #a3b491;transform:rotate(-2deg);padding:13px;color:#31523c;margin-bottom:5px}#ks-journal .store-polaroids{display:grid;grid-template-columns:1fr 1fr;gap:13px;width:100%;padding:8px}#ks-journal .store-card{border:0;background:none;min-width:0;padding:0;transform:rotate(-5deg);color:inherit;font:inherit}#ks-journal .store-card:nth-child(2){transform:rotate(5deg) translateY(15px)}#ks-journal .store-card .polaroid{margin:0;height:160px;padding-bottom:30px}#ks-journal .store-card figcaption{font-size:12px;white-space:normal;line-height:14px;padding-top:4px}#ks-journal .store-card:hover{transform:rotate(0deg)}#ks-journal .store-action{border:1px solid var(--blue);padding:10px 16px;background:none;color:var(--blue);font:inherit;text-decoration:none;display:inline-block}#ks-journal .demo-settings{margin:15px 3%;border-top:1px dashed #b9b4a5;padding-top:12px;font:13px Arial,sans-serif;color:#5f584e}#ks-journal .demo-settings summary{padding:8px 0}#ks-journal .demo-settings p{font:12px/1.5 Arial,sans-serif;margin:8px 0}#ks-journal .demo-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 0}#ks-journal .demo-fields label{display:grid;gap:6px;min-width:0}#ks-journal .demo-fields input,#ks-journal .demo-fields select{width:100%;min-width:0;padding:9px;border:1px solid #bbb5a5;border-radius:3px;background:#fffdf7;color:#403a32;font:14px Arial,sans-serif}#ks-journal .demo-fields input[type=file]{font-size:12px}#ks-journal .demo-notice{font:12px Arial,sans-serif;color:#8b453a;min-height:18px}#ks-journal h1.compact-title{font-size:clamp(26px,3.4cqw,38px)}
+@media(max-width:600px){#ks-journal .demo-fields{grid-template-columns:1fr}#ks-journal .polaroid-stack{height:205px}#ks-journal .polaroid-stack .polaroid{height:150px}#ks-journal .filmstrip img{height:70px}#ks-journal .social-link{padding:8px 4px}#ks-journal .store-card .polaroid{height:145px}#ks-journal .sheet{gap:10px}}
+@media(prefers-reduced-motion:reduce){#ks-journal .polaroid-stack .polaroid{transition:none}}
+
+@media (max-width:700px){
+ #ks-journal .work-tabs{
+  gap:6px;
+  margin:-18px 0 14px 0;
+  flex-wrap:wrap;
+ }
+ #ks-journal .work-tabs button{
+  min-width:92px;
+  height:46px;
+  padding:8px 14px 9px;
+  font-size:18px;
+  border-radius:14px 14px 0 0;
+ }
+}
+
+
+
+/* ===== KARYA: folder-divider tabs seperti referensi ===== */
+#ks-journal.is-work .sheet-a{
+  overflow:visible;
+  position:absolute;
+}
+
+#ks-journal.is-work .work-tabs{
+  position:absolute;
+  top:-38px;
+  left:22px;
+  z-index:8;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+  gap:0;
+  margin:0;
+  padding:0;
+  width:auto;
+  height:48px;
+  flex-wrap:nowrap;
+  pointer-events:auto;
+}
+
+#ks-journal.is-work .work-tabs button{
+  appearance:none;
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:124px;
+  height:48px;
+  margin:0 0 0 -6px;
+  padding:8px 22px 11px;
+
+  border:0;
+  border-radius:0;
+  background:#c9c9bb;
+  color:#4e4a43;
+
+  font:700 19px 'Gaegu',cursive;
+  line-height:1;
+  letter-spacing:.02em;
+  text-align:center;
+
+  clip-path:polygon(
+    0 100%,
+    0 38%,
+    8% 38%,
+    12% 5%,
+    88% 5%,
+    92% 38%,
+    100% 38%,
+    100% 100%
+  );
+
+  filter:drop-shadow(0 2px 1px rgba(46,42,40,.13));
+  transform:none;
+  cursor:pointer;
+}
+
+#ks-journal.is-work .work-tabs button:first-child{
+  margin-left:0;
+  z-index:3;
+  background:#d3d6bd;
+}
+
+#ks-journal.is-work .work-tabs button:nth-child(2){
+  z-index:2;
+  background:#c8c9bd;
+}
+
+#ks-journal.is-work .work-tabs button:nth-child(3){
+  z-index:1;
+  background:#c3c6b8;
+}
+
+#ks-journal.is-work .work-tabs button::after{
+  content:"";
+  position:absolute;
+  left:10px;
+  right:10px;
+  bottom:0;
+  height:7px;
+  background:rgba(248,248,243,.55);
+}
+
+#ks-journal.is-work .work-tabs button[aria-pressed="true"]{
+  z-index:6;
+  background:#f1f0e5;
+  color:#315840;
+  filter:drop-shadow(0 2px 1px rgba(46,42,40,.16));
+}
+
+#ks-journal.is-work .work-tabs button:hover{
+  transform:translateY(-2px);
+}
+
+#ks-journal.is-work .work-tabs button[aria-pressed="true"]:hover{
+  transform:translateY(-2px);
+}
+
+/* beri ruang judul agar tidak bertabrakan dengan tab yang keluar dari kertas */
+#ks-journal.is-work .sheet-a > h2{
+  margin-top:12px !important;
+}
+
+@media(max-width:700px){
+  #ks-journal.is-work .work-tabs{
+    top:-32px;
+    left:12px;
+    height:42px;
+  }
+
+  #ks-journal.is-work .work-tabs button{
+    min-width:96px;
+    height:42px;
+    padding:7px 13px 10px;
+    font-size:16px;
+    margin-left:-5px;
+  }
+}
+
+/* ===== Performance + smooth motion ===== */
+#ks-journal .stage{
+  will-change:height;
+}
+
+#ks-journal .book-object{
+  will-change:transform,width,height;
+  backface-visibility:hidden;
+  transform-style:preserve-3d;
+}
+
+#ks-journal .spread,
+#ks-journal .turn-leaf,
+#ks-journal .leaf-face{
+  backface-visibility:hidden;
+}
+
+#ks-journal .spread{
+  will-change:opacity;
+}
+
+#ks-journal .turn-leaf{
+  will-change:transform,filter;
+}
+
+#ks-journal nav button,
+#ks-journal .work-tabs button,
+#ks-journal .project .cover,
+#ks-journal .link-button,
+#ks-journal .social-link{
+  transition-timing-function:cubic-bezier(.22,1,.36,1);
+}
+
+@media (prefers-reduced-motion: reduce){
+  #ks-journal .stage,
+  #ks-journal .book-object,
+  #ks-journal .spread,
+  #ks-journal .turn-leaf,
+  #ks-journal .leaf-face{
+    transition:none !important;
+    animation:none !important;
+  }
+}

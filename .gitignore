@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.npm-cache/
+*.log
+qa-*.png
+qa-*.json
+reference/
+AUDIT-QA.md
+.DS_Store
+Thumbs.db

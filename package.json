@@ -1,0 +1,9 @@
+{
+  "name": "kristanto-mrk-portfolio",
+  "version": "1.3.0",
+  "private": true,
+  "scripts": {
+    "preview": "python -m http.server 8765 --bind 127.0.0.1",
+    "check": "node --check js/app.js && node --check js/content.js && node --check js/studio.js && node --check js/interface.js && node --check js/code-lab.js && node --check js/github-snapshot.js"
+  }
+}
