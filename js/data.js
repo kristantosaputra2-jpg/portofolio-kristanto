@@ -1,3 +1,4 @@
+/* DATA ISI WEB - Kristanto Saputra (Mr.K) */
 window.SITE = {
   "meta": {
     "title": "Kristanto Saputra — Pendidik & Perancang Solusi Digital",
@@ -850,5 +851,8 @@ window.SITE = {
   "footer": {
     "copy": "Kristanto Saputra · Kelas Mr.K. Dibuat dari pedalaman Kalimantan Tengah.",
     "base": "Mendidik dari pedalaman, membangun untuk Indonesia."
+  },
+  "admin": {
+    "pin": "mrk123"
   }
 };
