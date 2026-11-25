@@ -15,7 +15,7 @@
   /* ---------- 1. UTIL ---------- */
   function esc(t){ return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   function url(u){ u = String(u || '').trim(); return /^(https?:|mailto:|tel:|#)/i.test(u) ? esc(u) : (u ? 'https://' + esc(u.replace(/^\/+/, '')) : '#'); }
-  function img(src){ return /^data:image\/|^(https?:)?\/\/|^[\w\-./]+\.(png|jpe?g|webp|gif|svg)$/i.test(src || '') ? esc(src) : ''; }
+  function img(src){ if (/^\/api\/media\/[a-f0-9-]+$/.test(src || '')) return esc(src); return /^data:image\/|^(https?:)?\/\/|^[\w\-./]+\.(png|jpe?g|webp|gif|svg)$/i.test(src || '') ? esc(src) : ''; }
   var clamp = function(v,a,b){ return Math.max(a, Math.min(b, v)); };
   var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>';
   var CHECK = '<svg viewBox="0 0 14 14" fill="none" stroke="#d4202a" stroke-width="2.4" stroke-linecap="round"><path d="M2 7l3.5 4L12 2"/></svg>';
