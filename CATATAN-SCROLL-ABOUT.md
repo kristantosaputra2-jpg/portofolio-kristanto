@@ -53,3 +53,33 @@ ffmpeg -i video.mp4 -an -c:v libwebp -quality 72 public/assets/scroll-about/fram
 Dalam mode klik dua kali ini, menu Berbagi, tombol Admin, dan konten dari dashboard tidak muncul. Untuk melihat versi lengkap, tetap jalankan lewat server (`npm start` atau Live Server).
 
 File yang berubah: `public/index.html` (skrip cadangan) dan `public/js/bootstrap.js` (penanda `window.__folioBoot`).
+
+## Update 3: video baru, redaksi "web developer", tata letak kreatif
+
+**Video.** Frame diganti dari video baru (0 sampai 6,4 detik, tanpa medali), sekarang 153 frame dengan total ±2,1 MB. Nilai `TOTAL` di `js/scroll-about.js` sudah disesuaikan.
+
+**Redaksi.** Teks bagian ini sekarang ada di file tersendiri, **`public/js/scroll-story.js`**. Edit langsung di situ. Tulis `*kata*` untuk memberi stabilo kuning.
+
+| Langkah | Tata letak | Isi |
+|---|---|---|
+| 01 | `hello` | "Halo, saya" (serif miring) + **Tot.** raksasa + nama lengkap tulisan tangan |
+| 02 | `role` | **WEB** bergaris luar + **DEVELOPER** padat, "yang kebetulan juga guru ↘" |
+| 03 | `offline` | *Ringan.* / **CEPAT.** / stiker kuning "Tetap jalan tanpa sinyal." |
+| 04 | `build` | "Bukan cuma untuk sekolah." + 6 bidang karya bernomor dalam 2 kolom |
+| 05 | `final` | *Guru di kelas.* **Developer di layar.**, angka statistik, tag, tombol "Lihat karya saya" |
+
+**Font baru** (dari Google Fonts): Instrument Serif (miring elegan) dan JetBrains Mono (label bernuansa kode). Font ini dipadukan dengan Archivo, Bricolage, Hanken, dan Patrick Hand yang sudah ada.
+
+**Yang masih dari dashboard admin:** angka statistik dan tag. Tag saat ini masih bernuansa pendidikan. Kalau mau, ganti lewat dashboard, misalnya menjadi Web App, Offline-first, Supabase, dan AI.
+
+**Catatan:** paragraf bio lama di dashboard tidak dipakai lagi di bagian ini. Situs yang sudah online tetap mengambil teks dari `scroll-story.js`, jadi setelah file itu diedit perlu deploy ulang.
+
+File yang berubah: `js/main.js` (`tAbout`), `js/scroll-story.js` (baru), `js/scroll-about.js`, `css/scroll-about.css`, `index.html` (font + script), dan `assets/scroll-about/` (frame baru).
+
+Sudah dicek di laptop 1440px, HP 390px, mode tanpa animasi, dan saat dibuka dengan klik dua kali. `npm run check` dan `npm test` lulus.
+
+## Update 4: nama asli, penghargaan, redaksi peran
+
+- Langkah 01 sekarang menampilkan nama lengkap **KRISTANTO SAPUTRA** dengan S.Pd. tulisan tangan. Sebutan "Tot" sudah dihapus.
+- Langkah 02: catatan diganti jadi "sekaligus guru di pedalaman Kalimantan". Paragrafnya: Guru Pendidikan Agama Kristen yang mengajar Matematika serta Koding & Kecerdasan Artifisial.
+- Langkah 05: angkanya sekarang **2025 Gemini Educator · 2026 ZEP Quiz Global Ambassador · 25+ proyek · 5 tahun memimpin sekolah**. Angka ini disimpan di `scroll-story.js` (bagian `stats`), jadi tidak tertimpa data dashboard.

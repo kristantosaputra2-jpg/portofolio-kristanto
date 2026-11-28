@@ -6,7 +6,7 @@
    Dipanggil dari js/main.js setelah halaman selesai dirender.
    ===================================================================== */
 (function (W, D) {
-  var TOTAL = 192;
+  var TOTAL = 153;
   var src = function (i) { return 'assets/scroll-about/frame_' + String(i + 1).padStart(4, '0') + '.webp'; };
 
   var frames = [], loadingStarted = false, st = null, queued = false;

@@ -83,22 +83,39 @@
       '<div class="band yellow"><div class="track">' + rep(t.phrases) + '</div></div></div>';
   }
 
-  /* About = scroll video: frame video digambar ke canvas sesuai posisi scroll,
-     teks "Tentang saya" muncul bergantian. Logika scroll ada di js/scroll-about.js */
+  /* About = scroll video: frame video digambar ke canvas sesuai posisi scroll.
+     Redaksi tiap langkah ada di js/scroll-story.js, logika scroll di js/scroll-about.js */
   function tAbout(){
-    var a = S.about, name = esc(S.brand.first + ' ' + S.brand.last);
-    var bio = a.bio || [], tags = a.tags || [], stats = a.stats || [];
-    var steps = [];
-    steps.push('<span class="label-line">' + esc(a.label) + '</span>' +
-      '<h2>' + esc(a.hello) + '<br>' + esc(a.prefix) + ' <span class="hl">' + name + '</span>' +
-      (S.brand.degree ? ' <span class="deg">' + esc(S.brand.degree) + '</span>' : '') + '</h2>' +
-      (a.caption ? '<p class="sa-cap">' + esc(a.caption) + '</p>' : ''));
-    bio.forEach(function(p){ steps.push('<p class="bio">' + esc(p) + '</p>'); });
-    steps.push('<div class="tags">' + tags.map(function(t){ return '<span class="tag">' + esc(t) + '</span>'; }).join('') + '</div>' +
-      (a.tools && a.tools.length ? '<p class="tools"><b>Alat:</b>' + a.tools.map(function(t){ return '<span>' + esc(t) + '</span>'; }).join('') + '</p>' : '') +
-      '<div class="sa-stats">' + stats.map(function(s){ return '<div><b class="hl">' + esc(s.value) + '</b><span>' + esc(s.label) + '</span></div>'; }).join('') + '</div>');
+    var a = S.about, story = W.SCROLL_STORY || [];
+    var name = esc(S.brand.first + ' ' + S.brand.last);
+    var mk = function(t){ return esc(t || '').replace(/\*([^*]+)\*/g, '<span class="hl">$1</span>'); };
+    var code = function(st){ return st.code ? '<span class="sa-code">' + esc(st.code) + '</span>' : ''; };
+    var stats = a.stats || [], tags = a.tags || [];
+    var html = {
+      hello: function(st){ return code(st) +
+        '<p class="sa-kicker">' + mk(st.kicker) + '</p>' +
+        '<h2 class="sa-mega">' + mk(st.big).replace(/\n/g, '<br>') + ' <span class="sa-deg">' + mk(st.note) + '</span></h2>' +
+        '<p class="sa-text">' + mk(st.text) + '</p>'; },
+      role: function(st){ return code(st) +
+        '<h2 class="sa-dev"><span class="o">' + mk(st.big[0]) + '</span><span>' + mk(st.big[1]) + '</span></h2>' +
+        '<p class="sa-note sa-arrow">' + mk(st.note) + '</p>' +
+        '<p class="sa-text">' + mk(st.text) + '</p>'; },
+      offline: function(st){ return code(st) +
+        '<h2 class="sa-lines">' + st.lines.map(function(l, i){ return '<span class="l' + i + '">' + mk(l) + '</span>'; }).join('') + '</h2>' +
+        '<p class="sa-text">' + mk(st.text) + '</p>'; },
+      build: function(st){ return code(st) +
+        '<h2 class="sa-title">' + mk(st.title) + '</h2>' +
+        '<ol class="sa-grid">' + st.items.map(function(it, i){ return '<li><i>' + String(i + 1).padStart(2, '0') + '</i><b>' + mk(it.k) + '</b><span>' + mk(it.v) + '</span></li>'; }).join('') + '</ol>' +
+        (st.foot ? '<p class="sa-foot">' + mk(st.foot) + '</p>' : ''); },
+      final: function(st){ return code(st) +
+        '<h2 class="sa-lines sa-fin">' + st.lines.map(function(l, i){ return '<span class="l' + i + '">' + mk(l) + '</span>'; }).join('') + '</h2>' +
+        '<div class="sa-stats">' + (st.stats || stats).map(function(x){ return '<div><b>' + esc(x.value) + '</b><span>' + esc(x.label) + '</span></div>'; }).join('') + '</div>' +
+        '<div class="sa-tags">' + tags.map(function(t){ return '<span>' + esc(t) + '</span>'; }).join('') + '</div>' +
+        (st.cta ? '<a class="btn sa-cta" href="' + esc(st.cta.href) + '">' + esc(st.cta.text) + ' →</a>' : ''); }
+    };
+    var steps = story.map(function(st){ return '<div class="sa-in sa-' + st.layout + '">' + (html[st.layout] || html.hello)(st) + '</div>'; });
     var n = steps.length;
-    return '<section id="about" class="sa" style="--n:' + n + '"><div class="sa-track"><div class="sa-stage">' +
+    return '<section id="about" class="sa" style="--n:' + n + '" aria-label="Tentang saya"><div class="sa-track"><div class="sa-stage">' +
       '<div class="sa-card">' +
         '<canvas class="sa-canvas" width="1280" height="720" role="img" aria-label="Video ' + name + ' berputar, jaket berganti menjadi seragam ASN"></canvas>' +
         '<div class="sa-copy">' + steps.map(function(h, i){ return '<div class="sa-step" data-i="' + i + '">' + h + '</div>'; }).join('') + '</div>' +
