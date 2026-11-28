@@ -7,7 +7,7 @@
    ===================================================================== */
 (function (W, D) {
   var TOTAL = 153;
-  var src = function (i) { return 'assets/scroll-about/frame_' + String(i + 1).padStart(4, '0') + '.webp'; };
+  var src = function (i) { return 'assets/scroll-about/frame_' + String(i + 1).padStart(4, '0') + '.webp?v=about-v4-frames'; };
 
   var frames = [], loadingStarted = false, st = null, queued = false;
   var reduce = W.matchMedia('(prefers-reduced-motion: reduce)');
