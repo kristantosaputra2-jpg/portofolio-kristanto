@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,900&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Patrick+Hand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/berbagi.css">
-<link rel="stylesheet" href="css/scroll-about.css">
+<link rel="stylesheet" href="css/scroll-about.css?v=about-v4-2">
 </head>
 <body class="loading">
 <!-- filter tepi kasar untuk huruf PORTFOLIO -->
@@ -22,22 +22,22 @@
 <div id="progress"></div>
 <div id="cursor" aria-hidden="true"><span class="c-dot"></span><span class="c-ring"><em>Lihat</em></span></div>
 
-<!-- seluruh halaman disusun oleh js/main.js dari js/data.js -->
+<!-- seluruh halaman disusun oleh js/main.js?v=about-v4-2 dari js/data.js -->
 <div id="app"></div>
 <noscript><p style="padding:40px;font-family:sans-serif">Aktifkan JavaScript untuk melihat portofolio ini.</p></noscript>
 
 <script src="js/data.js"></script>
 <script src="js/thumbs.js"></script>
-<script src="js/scroll-story.js"></script>
-<script src="js/scroll-about.js"></script>
+<script src="js/scroll-story.js?v=about-v4-2"></script>
+<script src="js/scroll-about.js?v=about-v4-2"></script>
 
-<script type="module" src="js/bootstrap.js"></script>
+<script type="module" src="js/bootstrap.js?v=about-v4-2"></script>
 <script>
 /* Cadangan: kalau index.html dibuka dengan klik dua kali (file://), browser memblokir
    bootstrap.js. Setelah 2,5 detik, tampilan dimuat langsung dari js/data.js. */
 setTimeout(function(){
-  if (window.__folioBoot || document.querySelector('script[src="js/main.js"]')) return;
-  var s=document.createElement('script'); s.src='js/main.js'; document.body.appendChild(s);
+  if (window.__folioBoot || document.querySelector('script[src="js/main.js?v=about-v4-2"]')) return;
+  var s=document.createElement('script'); s.src='js/main.js?v=about-v4-2'; document.body.appendChild(s);
 }, 2500);
 </script>
 

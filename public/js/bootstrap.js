@@ -15,7 +15,7 @@ window.__folioBoot=true;
  } catch {
   if(preview) { document.body.classList.remove('loading');document.getElementById('app').textContent='Pratinjau privat memerlukan login admin dan server aktif.';return; }
  }
- const s=document.createElement('script');s.src='js/main.js';s.onload=()=>{
+ const s=document.createElement('script');s.src='js/main.js?v=about-v4-2';s.onload=()=>{
   const menu=document.getElementById('menu');if(menu){const link=document.createElement('a');link.href='/berbagi.html';link.textContent='Berbagi';menu.append(link);}
   const footer=document.querySelector('#footer nav');if(footer){const link=document.createElement('a');link.href='/berbagi.html';link.textContent='Berbagi';footer.append(link);}
   if(footer){const admin=document.createElement('a');admin.href='/admin';admin.textContent='Admin';admin.setAttribute('aria-label','Login Admin');footer.append(admin);}
