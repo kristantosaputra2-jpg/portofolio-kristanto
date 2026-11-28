@@ -130,6 +130,44 @@ window.SITE = {
     ],
     "projects": [
       {
+        "image": "assets/projects/step-by-steph/view-1.png",
+        "link": "",
+        "ai": "",
+        "title": "Step by Steph Tour",
+        "sub": "Website wisata Lombok dwibahasa",
+        "cats": [
+          "web"
+        ],
+        "thumb": "steph",
+        "deco": "pin",
+        "statusType": "dev",
+        "status": "",
+        "platform": "Website",
+        "problem": "Pengelola tur butuh website yang meyakinkan wisatawan lokal dan mancanegara.",
+        "solution": "Informasi destinasi, paket tur, galeri, dan kontak/pemesanan dalam bahasa Indonesia dan Inggris.",
+        "users": "Wisatawan, pengelola tur",
+        "stack": "WordPress · Elementor",
+        "note": "Proyek berbayar untuk klien.",
+        "images": [
+          {
+            "src": "assets/projects/step-by-steph/view-2.png",
+            "alt": "Step by Steph Tour — tampilan website 2"
+          },
+          {
+            "src": "assets/projects/step-by-steph/view-3.png",
+            "alt": "Step by Steph Tour — tampilan website 3"
+          },
+          {
+            "src": "assets/projects/step-by-steph/view-4.png",
+            "alt": "Step by Steph Tour — tampilan website 4"
+          },
+          {
+            "src": "assets/projects/step-by-steph/view-5.png",
+            "alt": "Step by Steph Tour — tampilan website 5"
+          }
+        ]
+      },
+      {
         "title": "Kelasku",
         "sub": "Administrasi kelas digital",
         "cats": [
@@ -390,26 +428,6 @@ window.SITE = {
             "alt": "PIJAR — Screenshot penerapan lima tahap PIJAR."
           }
         ]
-      },
-      {
-        "image": "",
-        "link": "",
-        "ai": "",
-        "title": "Step by Steph Tour",
-        "sub": "Website wisata Lombok dwibahasa",
-        "cats": [
-          "web"
-        ],
-        "thumb": "steph",
-        "deco": "pin",
-        "statusType": "dev",
-        "status": "",
-        "platform": "Website",
-        "problem": "Pengelola tur butuh website yang meyakinkan wisatawan lokal dan mancanegara.",
-        "solution": "Informasi destinasi, paket tur, galeri, dan kontak/pemesanan dalam bahasa Indonesia dan Inggris.",
-        "users": "Wisatawan, pengelola tur",
-        "stack": "WordPress · Elementor",
-        "note": "Proyek berbayar untuk klien."
       },
       {
         "title": "Web SMPN 7 Katingan Hilir",
