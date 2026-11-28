@@ -848,13 +848,14 @@ window.SITE = {
     "lead": "Mau membangun sistem untuk sekolah, mengundang narasumber, atau ngobrol soal AI di kelas? Kirim pesan saja.",
     "email": "kristantosaputra2@gmail.com",
     "socials": {
-      "instagram": "https://instagram.com/kelasmrk",
-      "tiktok": "",
-      "youtube": "",
-      "whatsapp": "",
-      "facebook": "",
+      "instagram": "https://www.instagram.com/kristantosaputra",
+      "tiktok": "https://www.tiktok.com/@kris_spt",
+      "youtube": "https://youtube.com/@kelas_mr.k-o8s",
+      "whatsapp": "082211229579",
+      "facebook": "https://www.facebook.com/share/1FymW6TXLf/",
       "linkedin": "",
-      "website": ""
+      "website": "",
+      "threads": "https://www.threads.com/@kristantosaputra"
     },
     "formTitle": "Kirim catatan singkat",
     "purposes": [
