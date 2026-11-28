@@ -1,0 +1,69 @@
+/* =====================================================================
+   SCROLL ABOUT — bagian "Tentang saya" versi video scroll
+   Panjang scroll = jumlah langkah teks (--n) × 85vh + 1 layar.
+   ===================================================================== */
+#about.sa{padding:0}
+.sa-track{height:calc(var(--n,5) * 85vh + 100vh);position:relative}
+.sa-stage{position:sticky;top:0;height:100vh;padding:78px 18px 18px}
+.sa-card{position:relative;height:100%;max-width:1400px;margin:0 auto;border-radius:28px;overflow:hidden;
+  background:radial-gradient(120% 90% at 75% 40%,#2a2019 0%,#120e0b 70%);color:#f6f2ea;
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+
+/* video: sisi kanan, tepi kiri memudar ke latar */
+.sa-canvas{position:absolute;top:0;right:0;width:66%;height:100%;object-fit:cover;object-position:50% 30%;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 26%);mask-image:linear-gradient(to right,transparent 0,#000 26%)}
+
+/* teks */
+.sa-copy{position:absolute;left:0;top:0;bottom:0;width:46%;padding:0 0 0 clamp(28px,5vw,72px);display:grid;align-items:center}
+.sa-step{grid-area:1/1;opacity:0;transform:translateY(34px);filter:blur(6px);
+  transition:opacity .6s var(--ease),transform .7s var(--ease),filter .6s var(--ease);pointer-events:none}
+.sa-step.past{transform:translateY(-34px)}
+.sa-step.on{opacity:1;transform:none;filter:none;pointer-events:auto}
+
+.sa .label-line{color:#d8cfc2}
+.sa h2{font-family:var(--head);font-weight:800;font-size:clamp(36px,4.6vw,64px);line-height:1.02;letter-spacing:-.02em;margin:12px 0 10px}
+.sa .hl{color:#fff6dc;background:linear-gradient(rgba(241,224,110,.42),rgba(241,224,110,.42)) no-repeat 0 90%/0% 34%;transition:background-size .9s var(--ease) .2s}
+.sa-step.on .hl,.sa-static .hl{background-size:100% 34%}
+.sa h2 .deg{display:inline-block;font-family:var(--hand);font-weight:400;font-size:.5em;color:#ff6b6b;rotate:-4deg;vertical-align:.3em}
+.sa-cap{font-family:var(--hand);font-size:20px;color:#bdb3a6;rotate:-1.5deg}
+.sa p.bio{font-size:clamp(17px,1.55vw,22px);line-height:1.55;color:#efe9df;max-width:30ch;
+  font-weight:500;text-wrap:pretty}
+.sa .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.sa .tag{color:#161616}
+.sa .tools{color:#d8cfc2;margin-bottom:16px}
+.sa-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:520px}
+.sa-stats b{font-family:var(--head);font-size:clamp(30px,3vw,44px);line-height:1;display:inline-block}
+.sa-stats span{display:block;font-size:13px;color:#cfc6b8;margin-top:6px;line-height:1.35}
+
+/* penanda langkah & progress */
+.sa-meta{position:absolute;left:clamp(28px,5vw,72px);bottom:28px;display:flex;align-items:center;gap:14px;font-family:var(--hand);font-size:18px;color:#d8cfc2}
+.sa-dots{display:flex;gap:6px}
+.sa-dots i{width:22px;height:3px;border-radius:3px;background:#ffffff33;transition:background .4s}
+.sa-dots i.on{background:var(--yellow)}
+.sa-hint{opacity:.7;transition:opacity .4s}
+.sa-end .sa-hint{opacity:0}
+.sa-bar{position:absolute;left:0;bottom:0;height:4px;width:100%;background:var(--red);transform-origin:left;transform:scaleX(0)}
+
+/* ---------- HP & tablet: video di atas, teks di bawah ---------- */
+@media (max-width:900px){
+  .sa-stage{padding:64px 10px 10px}
+  .sa-card{border-radius:20px}
+  .sa-canvas{width:100%;height:58%;object-position:50% 20%;
+    -webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+  .sa-copy{top:auto;width:100%;height:50%;padding:0 22px 58px;align-items:end}
+  .sa h2{font-size:clamp(30px,8.5vw,44px)}
+  .sa p.bio{font-size:16px;max-width:none}
+  .sa-stats{gap:10px}
+  .sa-stats span{font-size:11.5px}
+  .sa-meta{left:22px;bottom:18px;font-size:16px}
+}
+
+/* ---------- pengguna yang mematikan animasi: tampil biasa, tanpa scroll panjang ---------- */
+.sa-static .sa-track{height:auto}
+.sa-static .sa-stage{position:relative;height:auto;padding:40px 18px}
+.sa-static .sa-card{display:grid;grid-template-columns:1fr 1fr;min-height:0}
+.sa-static .sa-canvas{position:relative;width:100%;height:auto;aspect-ratio:16/9;order:2;-webkit-mask-image:none;mask-image:none}
+.sa-static .sa-copy{position:relative;width:auto;padding:40px;display:block}
+.sa-static .sa-step{opacity:1;transform:none;filter:none;margin-bottom:18px}
+.sa-static .sa-meta,.sa-static .sa-bar{display:none}
+@media (max-width:900px){.sa-static .sa-card{grid-template-columns:1fr}.sa-static .sa-canvas{order:0}}

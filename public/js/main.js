@@ -83,23 +83,28 @@
       '<div class="band yellow"><div class="track">' + rep(t.phrases) + '</div></div></div>';
   }
 
+  /* About = scroll video: frame video digambar ke canvas sesuai posisi scroll,
+     teks "Tentang saya" muncul bergantian. Logika scroll ada di js/scroll-about.js */
   function tAbout(){
-    var a = S.about, src = img(a.photo);
-    var photo = src ? '<img src="' + src + '" alt="Foto ' + esc(S.brand.first + ' ' + S.brand.last) + '">' :
-      '<svg viewBox="0 0 270 320" role="img" aria-label="Ilustrasi avatar">' + W.AVATAR_SVG + '</svg>';
-    return '<section id="about"><div class="wrap about">' +
-      '<figure class="polaroid zoom"><span class="tape"></span>' +
-        '<svg class="crown draw" viewBox="0 0 50 40" fill="none" stroke="#d4202a" stroke-width="2.4" stroke-linejoin="round"><path pathLength="1" d="M5 34 L8 10 L18 22 L25 6 L32 22 L42 10 L45 34 Z"/></svg>' +
-        '<div class="ph">' + photo + '</div><figcaption>' + esc(a.caption) + '</figcaption></figure>' +
-      '<div class="reveal" style="--sd:.1s"><span class="label-line">' + esc(a.label) + '</span>' +
-        '<h2>' + esc(a.hello) + '<br>' + esc(a.prefix) + ' <span class="hl">' + esc(S.brand.first + ' ' + S.brand.last) + '</span>' + (S.brand.degree ? ' <span class="deg">' + esc(S.brand.degree) + '</span>' : '') + '</h2>' +
-        a.bio.map(function(p){ return '<p class="bio">' + esc(p) + '</p>'; }).join('') +
-        '<div class="tags"><svg viewBox="0 0 30 16" fill="none" stroke="#161616" stroke-width="1.8" stroke-linecap="round"><path d="M2 4 C 8 14, 16 12, 26 8 M20 4 l6 4 -6 5"/></svg>' +
-          a.tags.map(function(t){ return '<span class="tag">' + esc(t) + '</span>'; }).join('') + '</div>' +
-        (a.tools.length ? '<p class="tools"><b>Alat:</b>' + a.tools.map(function(t){ return '<span>' + esc(t) + '</span>'; }).join('') + '</p>' : '') +
-      '</div>' +
-      '<div class="stats reveal" style="--sd:.25s">' + a.stats.map(function(s){ return '<div><b class="hl count" data-v="' + esc(s.value) + '">' + esc(s.value) + '</b><span>' + esc(s.label) + '</span></div>'; }).join('') + '</div>' +
-      '</div></section>';
+    var a = S.about, name = esc(S.brand.first + ' ' + S.brand.last);
+    var bio = a.bio || [], tags = a.tags || [], stats = a.stats || [];
+    var steps = [];
+    steps.push('<span class="label-line">' + esc(a.label) + '</span>' +
+      '<h2>' + esc(a.hello) + '<br>' + esc(a.prefix) + ' <span class="hl">' + name + '</span>' +
+      (S.brand.degree ? ' <span class="deg">' + esc(S.brand.degree) + '</span>' : '') + '</h2>' +
+      (a.caption ? '<p class="sa-cap">' + esc(a.caption) + '</p>' : ''));
+    bio.forEach(function(p){ steps.push('<p class="bio">' + esc(p) + '</p>'); });
+    steps.push('<div class="tags">' + tags.map(function(t){ return '<span class="tag">' + esc(t) + '</span>'; }).join('') + '</div>' +
+      (a.tools && a.tools.length ? '<p class="tools"><b>Alat:</b>' + a.tools.map(function(t){ return '<span>' + esc(t) + '</span>'; }).join('') + '</p>' : '') +
+      '<div class="sa-stats">' + stats.map(function(s){ return '<div><b class="hl">' + esc(s.value) + '</b><span>' + esc(s.label) + '</span></div>'; }).join('') + '</div>');
+    var n = steps.length;
+    return '<section id="about" class="sa" style="--n:' + n + '"><div class="sa-track"><div class="sa-stage">' +
+      '<div class="sa-card">' +
+        '<canvas class="sa-canvas" width="1280" height="720" role="img" aria-label="Video ' + name + ' berputar, jaket berganti menjadi seragam ASN"></canvas>' +
+        '<div class="sa-copy">' + steps.map(function(h, i){ return '<div class="sa-step" data-i="' + i + '">' + h + '</div>'; }).join('') + '</div>' +
+        '<div class="sa-meta"><span class="sa-num">01</span><span class="sa-dots">' + steps.map(function(){ return '<i></i>'; }).join('') + '</span><span class="sa-hint">gulir ↓</span></div>' +
+        '<div class="sa-bar"></div>' +
+      '</div></div></div></section>';
   }
 
   var ST = { live:'✅', proto:'🧪', dev:'🛠️', concept:'📝' };
@@ -239,6 +244,7 @@
     var md = $('meta[name="description"]'); if (md) md.setAttribute('content', S.meta.description || '');
     $('#app').innerHTML = tHeader() + '<main>' + tHero() + tTicker() + tAbout() + tWork() + tExpertise() + tStack() + tProcess() + tContact() + '</main>' + tFooter();
     bind();
+    if (W.initScrollAbout) W.initScrollAbout();
   }
 
   /* ---------- 4. INTERAKSI (dipasang ulang setiap render) ---------- */

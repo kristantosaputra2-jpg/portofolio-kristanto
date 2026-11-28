@@ -1,4 +1,5 @@
 import {mountSupport} from './support.js';
+window.__folioBoot=true;
 (async()=>{
  if(location.hash==='#admin') { location.replace('/admin.html');return; }
  document.addEventListener('folio:admin',()=>location.assign('/admin.html'));
